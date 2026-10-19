@@ -190,16 +190,16 @@
 
       <div class="projects-toolbar">
         <div class="chip-row" role="group" aria-label="Категория проектов">
-          <button class="chip" type="button" data-filter="all" aria-pressed="true">Все <span class="chip-count">6</span></button>
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Все <span class="chip-count">7</span></button>
           <button class="chip" type="button" data-filter="product" aria-pressed="false">Продукты <span class="chip-count">3</span></button>
-          <button class="chip" type="button" data-filter="personal" aria-pressed="false">Личные и учебные <span class="chip-count">3</span></button>
+          <button class="chip" type="button" data-filter="personal" aria-pressed="false">Личные и учебные <span class="chip-count">4</span></button>
         </div>
         <label class="projects-search">
           <span class="visually-hidden">Поиск по проектам</span>
           <input class="input" id="project-search" type="search" placeholder="Поиск: SwiftUI, видео, веб" autocomplete="off" spellcheck="false">
         </label>
       </div>
-      <p class="projects-status label" id="projects-status" aria-live="polite">Показано 6 из 6</p>
+      <p class="projects-status label" id="projects-status" aria-live="polite">Показано 7 из 7</p>
 
       <div class="projects-grid" id="projects-grid">
         <article class="project card" data-category="product">
@@ -355,6 +355,35 @@
               <li class="tag">Core Motion</li>
               <li class="tag">AirPods</li>
             </ul>
+          </div>
+        </article>
+
+        <article class="project card" data-category="personal">
+          <div class="project-media">
+            <img src="img/web-course.webp" alt="Четыре учебных сайта: панель путешественника, игра «Кампус 84», «Коворкинг 42» и база отдыха «Сосны»" width="960" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <span class="project-icon project-icon-text" aria-hidden="true">JS</span>
+              <div>
+                <h3>Веб-практики</h3>
+                <p class="label">Учебный · курс «Веб-дизайн»</p>
+              </div>
+            </div>
+            <p>Остальные работы этого курса: панель с виджетами и тремя API, платформер на Canvas, бронирование на плане коворкинга и сайт базы отдыха из четырёх страниц.</p>
+            <p class="project-fact">HTML, CSS и JavaScript без фреймворков, опубликованы на GitHub Pages</p>
+            <ul class="tags">
+              <li class="tag">JavaScript</li>
+              <li class="tag">Canvas</li>
+              <li class="tag">API</li>
+              <li class="tag">localStorage</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-sm" href="https://vislovivan.github.io/web-02-dashboard/" target="_blank" rel="noopener">Панель</a>
+              <a class="btn btn-sm" href="https://vislovivan.github.io/web-03-platformer/" target="_blank" rel="noopener">Игра</a>
+              <a class="btn btn-sm" href="https://vislovivan.github.io/web-04-booking/" target="_blank" rel="noopener">Коворкинг</a>
+              <a class="btn btn-sm" href="https://vislovivan.github.io/web-final-sosny/" target="_blank" rel="noopener">«Сосны»</a>
+            </div>
           </div>
         </article>
       </div>
