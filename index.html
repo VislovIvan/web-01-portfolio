@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Иван Вислов: iOS-разработчик</title>
+  <meta name="description" content="Портфолио Ивана Вислова: iOS-разработчик, студент СПбГУПТД, победитель Swift Student Challenge 2026. Проекты AiText, Lumen, ComponentsKit.">
+  <meta name="theme-color" content="#fbfbfa">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='6' fill='%2317161a'/%3E%3Cpath fill='%23fff' d='M8 9h4v14H8zM20 9h4v14h-4zM16 9h4v4h-4zM12 19h4v4h-4zM14 14h4v4h-4z'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('portfolio.theme'); } catch (e) {}
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="mac.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link btn" href="#main">К содержимому</a>
+
+  <header class="site-header" id="header">
+    <div class="site-header-inner">
+      <a class="brand" href="#top">Иван Вислов</a>
+      <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path class="menu-icon-open" d="M2 4h16v2H2zM2 9h16v2H2zM2 14h16v2H2z" fill="currentColor"/><path class="menu-icon-close" d="M4 2.6 10 8.6l6-6 1.4 1.4-6 6 6 6-1.4 1.4-6-6-6 6L2.6 16l6-6-6-6z" fill="currentColor"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Разделы">
+        <a class="nav-link" href="#about">О себе</a>
+        <a class="nav-link" href="#experience">Опыт</a>
+        <a class="nav-link" href="#skills">Навыки</a>
+        <a class="nav-link" href="#projects">Проекты</a>
+        <a class="nav-link" href="#contacts">Контакты</a>
+      </nav>
+      <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Тёмная тема" title="Светлая или тёмная тема">
+        <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 2a8 8 0 1 0 6 13.3A7 7 0 0 1 12 2z" fill="currentColor"/></svg>
+        <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="currentColor"/><path d="M9 0h2v4H9zM9 16h2v4H9zM0 9h4v2H0zM16 9h4v2h-4zM2.9 4.3l1.4-1.4 2.8 2.8-1.4 1.4zM12.9 14.3l1.4-1.4 2.8 2.8-1.4 1.4zM2.9 15.7l2.8-2.8 1.4 1.4-2.8 2.8zM12.9 5.7l2.8-2.8 1.4 1.4-2.8 2.8z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="label">iOS-разработчик · студент СПбГУПТД</p>
+        <h1 class="hero-title" id="hero-title">Иван Вислов</h1>
+        <p class="hero-lead">Делаю приложения для iPhone на Swift и SwiftUI: от дизайн-системы до релиза в App Store.</p>
+        <ul class="hero-facts">
+          <li><img src="img/ssc.webp" alt="" width="24" height="24"><span>Победитель Swift Student Challenge 2026</span></li>
+          <li><span class="hero-dot" aria-hidden="true"></span><span>Apple Developer Academy, Неаполь</span></li>
+          <li><span class="hero-dot" aria-hidden="true"></span><span>AiText: больше 60 000 пользователей</span></li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Смотреть проекты</a>
+          <a class="btn" href="#contacts">Связаться</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="app-tile" src="img/icon-lumen.webp" alt="" width="240" height="240">
+        <img class="app-tile" src="img/icon-componentskit.webp" alt="" width="240" height="240">
+        <img class="app-tile" src="img/icon-retrocut84.webp" alt="" width="240" height="240">
+        <img class="app-tile" src="img/icon-aitext.webp" alt="" width="240" height="240">
+      </div>
+    </section>
+
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="section-head">
+        <span class="label">01</span>
+        <h2 class="section-title" id="about-title">О себе</h2>
+      </div>
+      <div class="about">
+        <img class="about-photo" src="img/ivan.webp" alt="Иван Вислов на берегу моря" width="400" height="400" loading="lazy">
+        <div class="about-text">
+          <p>Я iOS-разработчик. С июля 2023 по март 2026 года в небольшой команде делал три продукта для App Store: AiText, Lumen и ComponentsKit. Отвечал за функции целиком: требования, дизайн взаимодействия, состояние, релиз и поддержку после выхода.</p>
+          <p>Больше всего люблю интерфейсы, которые отзываются на каждое действие: анимации, дизайн-системы, доступность. Больше пяти лет монтирую видео в Final Cut Pro.</p>
+          <p>Сейчас учусь на пятом курсе СПбГУПТД и пишу диплом: приложение «Ровно», которое следит за осанкой.</p>
+        </div>
+      </div>
+      <dl class="stats">
+        <div class="stat">
+          <dt>пользователей AiText</dt>
+          <dd>60 000+</dd>
+        </div>
+        <div class="stat">
+          <dt>средняя оценка AiText в App Store</dt>
+          <dd>4,8</dd>
+        </div>
+        <div class="stat">
+          <dt>звёзд у ComponentsKit на GitHub</dt>
+          <dd>180+</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section container" id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <span class="label">02</span>
+        <h2 class="section-title" id="experience-title">Опыт и образование</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <p class="label">Июль 2023 · март 2026</p>
+          <h3>iOS-разработчик</h3>
+          <p class="muted">Небольшая команда, три продукта в App Store: AiText, Lumen, ComponentsKit. Модульная архитектура на TCA и Tuist, подписки, аналитика, тесты на XCTest.</p>
+        </li>
+        <li class="timeline-item">
+          <p class="label">Сентябрь 2023 · июнь 2024</p>
+          <h3>Apple Developer Academy</h3>
+          <p class="muted">Университет Неаполя имени Федерико II, Италия. Разработка приложений, UX и UI-дизайн, управление проектами.</p>
+        </li>
+        <li class="timeline-item">
+          <p class="label">Сейчас · 5 курс</p>
+          <h3>СПбГУПТД</h3>
+          <p class="muted">Санкт-Петербургский государственный университет промышленных технологий и дизайна. Computer Science in Design, средний балл 4,7.</p>
+        </li>
+        <li class="timeline-item">
+          <p class="label">2026</p>
+          <h3>Swift Student Challenge</h3>
+          <p class="muted">Победитель ежегодного конкурса Apple для студентов-разработчиков.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container" id="skills" aria-labelledby="skills-title">
+      <div class="section-head">
+        <span class="label">03</span>
+        <h2 class="section-title" id="skills-title">Навыки</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group card-soft">
+          <h3 class="label">iOS</h3>
+          <ul class="tags">
+            <li class="tag">Swift</li>
+            <li class="tag">SwiftUI</li>
+            <li class="tag">UIKit</li>
+            <li class="tag">Swift Concurrency</li>
+            <li class="tag">Combine</li>
+            <li class="tag">Core Animation</li>
+          </ul>
+        </div>
+        <div class="skill-group card-soft">
+          <h3 class="label">Архитектура и инструменты</h3>
+          <ul class="tags">
+            <li class="tag">TCA</li>
+            <li class="tag">MVVM</li>
+            <li class="tag">Tuist</li>
+            <li class="tag">SPM</li>
+            <li class="tag">Xcode</li>
+            <li class="tag">Instruments</li>
+            <li class="tag">Git</li>
+            <li class="tag">XCTest</li>
+            <li class="tag">Firebase</li>
+          </ul>
+        </div>
+        <div class="skill-group card-soft">
+          <h3 class="label">Дизайн</h3>
+          <ul class="tags">
+            <li class="tag">Figma</li>
+            <li class="tag">Дизайн-системы</li>
+            <li class="tag">Анимации</li>
+            <li class="tag">Доступность</li>
+            <li class="tag">Human Interface Guidelines</li>
+            <li class="tag">Final Cut Pro</li>
+          </ul>
+        </div>
+        <div class="skill-group card-soft">
+          <h3 class="label">Веб, изучаю на курсе</h3>
+          <ul class="tags">
+            <li class="tag">HTML</li>
+            <li class="tag">CSS</li>
+            <li class="tag">JavaScript</li>
+            <li class="tag">GitHub Pages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <span class="label">04</span>
+        <h2 class="section-title" id="projects-title">Проекты</h2>
+      </div>
+      <p class="section-lead muted">Продукты, которые делал в команде, и личные и учебные проекты.</p>
+
+      <div class="projects-toolbar">
+        <div class="chip-row" role="group" aria-label="Категория проектов">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Все <span class="chip-count">6</span></button>
+          <button class="chip" type="button" data-filter="product" aria-pressed="false">Продукты <span class="chip-count">3</span></button>
+          <button class="chip" type="button" data-filter="personal" aria-pressed="false">Личные и учебные <span class="chip-count">3</span></button>
+        </div>
+        <label class="projects-search">
+          <span class="visually-hidden">Поиск по проектам</span>
+          <input class="input" id="project-search" type="search" placeholder="Поиск: SwiftUI, видео, веб" autocomplete="off" spellcheck="false">
+        </label>
+      </div>
+      <p class="projects-status label" id="projects-status" aria-live="polite">Показано 6 из 6</p>
+
+      <div class="projects-grid" id="projects-grid">
+        <article class="project card" data-category="product">
+          <div class="project-media">
+            <img src="img/aitext.webp" alt="AiText на Mac и iPhone: окно исправления текста и клавиатура" width="960" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <img class="project-icon" src="img/icon-aitext.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <h3>AiText</h3>
+                <p class="label">Продукт · App Store</p>
+              </div>
+            </div>
+            <p>Помощник для текста с ИИ и клавиатурой, которая работает в любом приложении. Исправляет ошибки и переписывает текст на 50+ языках с автоопределением.</p>
+            <p class="project-fact">60 000+ пользователей, оценка 4,8, до 34 места в категории «Справочники»</p>
+            <ul class="tags">
+              <li class="tag">SwiftUI</li>
+              <li class="tag">UIKit</li>
+              <li class="tag">TCA</li>
+              <li class="tag">Tuist</li>
+              <li class="tag">клавиатура iOS</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-sm" href="https://apps.apple.com/app/id1671317695" target="_blank" rel="noopener">App Store</a>
+              <a class="btn btn-sm" href="https://aitext.app" target="_blank" rel="noopener">Сайт</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card" data-category="product">
+          <div class="project-media project-media-dark">
+            <img class="project-media-icon" src="img/icon-lumen.webp" alt="Значок приложения Lumen" width="240" height="240" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <img class="project-icon" src="img/icon-lumen.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <h3>Lumen</h3>
+                <p class="label">Продукт · App Store</p>
+              </div>
+            </div>
+            <p>Генератор портретов с ИИ: превращает фото в мультфильм, живопись или реалистичный студийный портрет за несколько секунд.</p>
+            <p class="project-fact">Сделан с нуля: загрузка фото, генерация с прогрессом, сравнение «до и после», экспорт</p>
+            <ul class="tags">
+              <li class="tag">SwiftUI</li>
+              <li class="tag">TCA</li>
+              <li class="tag">Firebase</li>
+              <li class="tag">медиапайплайн</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-sm" href="https://apps.apple.com/app/id6748604526" target="_blank" rel="noopener">App Store</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card" data-category="product">
+          <div class="project-media">
+            <img src="img/componentskit.webp" alt="Обложка ComponentsKit: библиотека компонентов UIKit и SwiftUI" width="960" height="540" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <img class="project-icon" src="img/icon-componentskit.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <h3>ComponentsKit</h3>
+                <p class="label">Продукт · открытый код</p>
+              </div>
+            </div>
+            <p>Открытая библиотека анимированных компонентов для SwiftUI и UIKit: кнопки, поля, слайдеры, индикаторы, модальные окна. Темы на общих дизайн-токенах, порт на macOS.</p>
+            <p class="project-fact">180+ звёзд на GitHub, приложение-витрина в App Store</p>
+            <ul class="tags">
+              <li class="tag">SwiftUI</li>
+              <li class="tag">UIKit</li>
+              <li class="tag">macOS</li>
+              <li class="tag">дизайн-токены</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-sm" href="https://github.com/componentskit/ComponentsKit" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn-sm" href="https://apps.apple.com/app/id6737411097" target="_blank" rel="noopener">App Store</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card" data-category="personal">
+          <div class="project-media">
+            <img src="img/retrocut84.webp" alt="RetroCut84: монтажный стол в стиле первого Macintosh" width="960" height="741" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <img class="project-icon" src="img/icon-retrocut84.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <h3>RetroCut84</h3>
+                <p class="label">Личный проект</p>
+              </div>
+            </div>
+            <p>Видеоредактор в стиле первого Macintosh 1984 года, сделан к 40-летию Mac: обрезка клипов, звук, эффекты и встроенный урок монтажа.</p>
+            <p class="project-fact">Интерфейс нарисован заново по мотивам оригинальной системы</p>
+            <ul class="tags">
+              <li class="tag">Swift</li>
+              <li class="tag">монтаж видео</li>
+              <li class="tag">ретро-интерфейс</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project card" data-category="personal">
+          <div class="project-media">
+            <img src="img/42jobs.webp" alt="42jobs: список вакансий с фильтрами по стране и уровню" width="960" height="600" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <span class="project-icon project-icon-text" aria-hidden="true">42</span>
+              <div>
+                <h3>42jobs</h3>
+                <p class="label">Личный проект · веб</p>
+              </div>
+            </div>
+            <p>Каталог вакансий в компаниях, чьи приложения стоят в топ-чартах App Store. Больше 7 000 вакансий, фильтры по стране, уровню и направлению.</p>
+            <p class="project-fact">Статический сайт без фреймворков, отсюда и стиль этого портфолио</p>
+            <ul class="tags">
+              <li class="tag">Python</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-sm" href="https://42jobs.dev" target="_blank" rel="noopener">Открыть сайт</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card" data-category="personal">
+          <div class="project-media project-media-level">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Пузырьковый уровень: символ приложения «Ровно»">
+              <rect x="40" y="76" width="240" height="48" rx="24" fill="none" stroke="currentColor" stroke-width="6"/>
+              <rect x="136" y="70" width="6" height="60" fill="currentColor"/>
+              <rect x="178" y="70" width="6" height="60" fill="currentColor"/>
+              <circle cx="160" cy="100" r="14" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <span class="project-icon project-icon-text" aria-hidden="true">Р</span>
+              <div>
+                <h3>«Ровно»</h3>
+                <p class="label">Учебный · дипломный проект</p>
+              </div>
+            </div>
+            <p>iOS-приложение, которое следит за осанкой по датчикам движения в наушниках AirPods и напоминает выпрямиться. Есть режимы сессии, тренировки и разминки.</p>
+            <p class="project-fact">В разработке, дипломный проект в СПбГУПТД</p>
+            <ul class="tags">
+              <li class="tag">SwiftUI</li>
+              <li class="tag">Core Motion</li>
+              <li class="tag">AirPods</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="notice projects-empty" id="projects-empty" hidden>
+        <span>Ничего не нашлось. Попробуйте другую категорию или другой запрос.</span>
+        <button class="btn btn-sm" id="projects-reset" type="button">Показать все</button>
+      </div>
+    </section>
+
+    <section class="section container" id="contacts" aria-labelledby="contacts-title">
+      <div class="section-head">
+        <span class="label">05</span>
+        <h2 class="section-title" id="contacts-title">Контакты</h2>
+      </div>
+      <p class="section-lead muted">Открыт к предложениям по iOS-разработке и совместным проектам. Быстрее всего отвечаю на почту.</p>
+      <ul class="contacts">
+        <li>
+          <a class="contact" href="mailto:vislov.ivan999@gmail.com">
+            <span class="label">Почта</span>
+            <span class="contact-value">vislov.ivan999@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact" href="https://t.me/vangog101" target="_blank" rel="noopener">
+            <span class="label">Telegram</span>
+            <span class="contact-value">@vangog101</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact" href="https://github.com/VislovIvan" target="_blank" rel="noopener">
+            <span class="label">GitHub</span>
+            <span class="contact-value">VislovIvan</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact" href="https://linkedin.com/in/ivanvislov" target="_blank" rel="noopener">
+            <span class="label">LinkedIn</span>
+            <span class="contact-value">ivanvislov</span>
+          </a>
+        </li>
+      </ul>
+      <a class="btn btn-primary contacts-cv" href="https://vislovivan.github.io/projects/assets/cv.pdf" target="_blank" rel="noopener">Резюме, PDF на английском</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p><strong>Создано с помощью Claude.</strong> Функции на JavaScript: фильтр проектов по категории и поиск, светлая и тёмная тема с сохранением выбора, мобильное меню с закрытием по пункту и Escape, подсветка текущего раздела в меню.</p>
+      <p>Практическая работа 1 по курсу «Веб-дизайн», СПбГУПТД, 2026. <a class="link" href="https://github.com/VislovIvan/web-01-portfolio" target="_blank" rel="noopener">Код на GitHub</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
