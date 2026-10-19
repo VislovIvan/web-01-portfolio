@@ -45,6 +45,67 @@ function initTheme() {
   });
 }
 
+function initMenu() {
+  const header = document.getElementById('header');
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('site-nav');
+  const desktop = window.matchMedia('(min-width: 760px)');
+
+  function isOpen() {
+    return toggle.getAttribute('aria-expanded') === 'true';
+  }
+
+  function setOpen(open) {
+    header.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  }
+
+  toggle.addEventListener('click', () => setOpen(!isOpen()));
+
+  nav.addEventListener('click', (event) => {
+    if (event.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && isOpen()) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (isOpen() && !header.contains(event.target)) setOpen(false);
+  });
+
+  desktop.addEventListener('change', () => setOpen(false));
+}
+
+function initScrollSpy() {
+  const links = Array.from(document.querySelectorAll('.site-nav .nav-link'));
+  const sections = ['top', ...links.map((link) => link.hash.slice(1))]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  function mark(id) {
+    links.forEach((link) => {
+      const current = link.hash === `#${id}`;
+      link.classList.toggle('is-current', current);
+      if (current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+
+  // Текущим считается раздел, который пересекает середину экрана
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) mark(entry.target.id);
+    });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+
+  sections.forEach((section) => observer.observe(section));
+}
+
 function initProjects() {
   const chips = Array.from(document.querySelectorAll('[data-filter]'));
   const cards = Array.from(document.querySelectorAll('.project'));
@@ -98,4 +159,6 @@ function initProjects() {
 }
 
 initTheme();
+initMenu();
+initScrollSpy();
 initProjects();

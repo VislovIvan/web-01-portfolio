@@ -449,8 +449,10 @@
   transition: transform 70ms var(--ease-out), box-shadow 70ms var(--ease-out), background-color 120ms var(--ease-out);
 }
 
-.contact:hover {
-  background: var(--bg-sunken);
+@media (hover: hover) {
+  .contact:hover {
+    background: var(--bg-sunken);
+  }
 }
 
 .contact:active {

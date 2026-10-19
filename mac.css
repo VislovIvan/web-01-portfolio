@@ -178,8 +178,10 @@ a {
   text-underline-offset: 4px;
 }
 
-.link:hover {
-  text-decoration-thickness: 2px;
+@media (hover: hover) {
+  .link:hover {
+    text-decoration-thickness: 2px;
+  }
 }
 
 .label {
@@ -252,8 +254,14 @@ a {
     color 120ms var(--ease-out);
 }
 
-.btn:hover {
-  background: var(--bg-sunken);
+@media (hover: hover) {
+  .btn:hover {
+    background: var(--bg-sunken);
+  }
+
+  .btn-primary:hover {
+    background: var(--ink-hover);
+  }
 }
 
 .btn:active {
@@ -264,10 +272,6 @@ a {
 .btn-primary {
   color: var(--on-ink);
   background: var(--ink-line);
-}
-
-.btn-primary:hover {
-  background: var(--ink-hover);
 }
 
 .btn-danger {
@@ -305,8 +309,10 @@ a {
   transition: transform 70ms var(--ease-out), box-shadow 70ms var(--ease-out), background-color 120ms var(--ease-out);
 }
 
-.icon-btn:hover {
-  background: var(--bg-sunken);
+@media (hover: hover) {
+  .icon-btn:hover {
+    background: var(--bg-sunken);
+  }
 }
 
 .icon-btn:active {
@@ -518,8 +524,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.window-box:hover {
-  background: var(--bg-sunken);
+@media (hover: hover) {
+  .window-box:hover {
+    background: var(--bg-sunken);
+  }
 }
 
 .window-box:active {
@@ -686,8 +694,10 @@ a {
   transition: color 120ms var(--ease-out), border-color 120ms var(--ease-out);
 }
 
-.nav-link:hover {
-  color: var(--text);
+@media (hover: hover) {
+  .nav-link:hover {
+    color: var(--text);
+  }
 }
 
 .nav-link[aria-current="page"],
