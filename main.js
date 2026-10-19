@@ -1,5 +1,50 @@
 'use strict';
 
+const THEME_KEY = 'portfolio.theme';
+
+function readTheme() {
+  try {
+    return localStorage.getItem(THEME_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {
+    // Без хранилища тема переключается, но не запоминается
+  }
+}
+
+function initTheme() {
+  const root = document.documentElement;
+  const button = document.getElementById('theme-toggle');
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const system = window.matchMedia('(prefers-color-scheme: dark)');
+  let chosen = readTheme();
+
+  function apply(theme) {
+    root.dataset.theme = theme;
+    button.setAttribute('aria-pressed', String(theme === 'dark'));
+    meta.content = theme === 'dark' ? '#121114' : '#fbfbfa';
+  }
+
+  apply(root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+  button.addEventListener('click', () => {
+    chosen = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    apply(chosen);
+    saveTheme(chosen);
+  });
+
+  // Пока тема не выбрана вручную, она следует за системой
+  system.addEventListener('change', (event) => {
+    if (chosen !== 'dark' && chosen !== 'light') apply(event.matches ? 'dark' : 'light');
+  });
+}
+
 function initProjects() {
   const chips = Array.from(document.querySelectorAll('[data-filter]'));
   const cards = Array.from(document.querySelectorAll('.project'));
@@ -52,4 +97,5 @@ function initProjects() {
   render();
 }
 
+initTheme();
 initProjects();
